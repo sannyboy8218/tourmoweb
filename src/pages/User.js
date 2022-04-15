@@ -9,6 +9,7 @@ const User = () =>{
             <>
                 <tr>
                      <td>HI</td>
+                     <td>HELLO</td>
                 </tr>
             </>
         </Drawer>

@@ -1,8 +1,15 @@
-import React from "react"
+import React, { useState } from "react"
 import{ TextField,Button} from '@mui/material'
 import Logo from '../asset/IMG.png'
 
  const Login = () =>{
+    const [view,setview] = useState(false);
+    const [message,setmessage] = useState("");
+
+    const submit = () =>{
+        setview(true)
+        setmessage("Wrong Credential")
+    }
 return (
     <div className="login">
         <div className="container">
@@ -13,6 +20,9 @@ return (
                 <div className="container1">
                     <h1>TOURMO</h1>
                 </div>
+                {view &&
+                    <p>{message}</p>
+                }
                 <div className="formControl">
                     <TextField fullWidth id="fullWidth" label="Email" size="small" variant="outlined" />
                 </div>
@@ -21,7 +31,7 @@ return (
                 </div>
 
                 <div className="button"> 
-                <Button fullWidth size='large' variant="contained" >
+                <Button fullWidth size='large' variant="contained" onClick={submit}>
                     Log In
                 </Button>
                 </div>
