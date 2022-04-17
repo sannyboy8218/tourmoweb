@@ -26,7 +26,6 @@ const Drawer = (props) => {
             </div>
             <div className="content">
                 {props.children}
-                HI
             </div>
         </>
     )
